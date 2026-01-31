@@ -1,0 +1,55 @@
+Home Page: one page that scrolls with sections    
+
+it should be immediately clear who we are, like a banner or something that says, “ice out of sw denver”   then uynder that it should say, “neighbor led organizing, training, resources, and mutual aid for southwest denver”. 
+
+additional pages that you can navigate at the top tabs or toolbar or whatever its called. these should be “resources”   “events”  “get connected”  
+
+
+or maybe the view resources and get connected should be links on the home  page that then take 
+
+you to a different page. the get connected page should be a way to get to signal 
+
+
+
+
+✅ Best structure: “Get Connected” → a simple choice page
+
+When someone clicks Get Connected, they should land on a page that says:
+
+Choose how you want to connect (no full name required):
+
+With 3 clear options:
+
+
+🟢 Option 1: Join the Signal group (invite-only)
+
+Button text:
+Request a Signal Invite
+
+This links to a very short form (NOT the Signal link directly).
+
+Minimal form fields (no full name required):
+
+First name or nickname (optional)
+
+Preferred language (EN / ES)
+
+Neighborhood or cross streets (optional)
+
+How would you like us to contact you?
+
+Signal
+
+Text
+
+Email
+
+Field to enter that contact info
+
+Add this line above the submit button:
+
+“You can use a nickname. We do not require your legal name.”
+
+And below:
+
+“We send Signal invites manually to keep the group safe.”
