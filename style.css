@@ -91,6 +91,72 @@ p {
   text-decoration: underline;
 }
 
+/* --- HAMBURGER BUTTON --- */
+.nav-toggle {
+  display: none; /* shown only on mobile */
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.65);
+  border-radius: 10px;
+  padding: 0.65rem;
+  cursor: pointer;
+}
+
+.nav-toggle:focus-visible {
+  outline: 3px solid #ffd400;
+  outline-offset: 4px;
+}
+
+.nav-toggle-bar {
+  display: block;
+  width: 26px;
+  height: 3px;
+  background: #fff;
+  border-radius: 2px;
+}
+
+.nav-toggle-bar + .nav-toggle-bar {
+  margin-top: 6px;
+}
+
+/* --- MOBILE NAV BEHAVIOR --- */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* hide links by default on mobile */
+  .site-nav {
+    display: none;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  /* stack header items and allow nav to drop below */
+  .nav-container {
+    flex-wrap: wrap;
+  }
+
+  /* when open */
+  .site-nav.is-open {
+    display: block;
+    text-align: right;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 0 0 0;
+  }
+
+  .nav-links a {
+    display: inline-block;
+    padding: 0.5rem 0;
+  }
+}
+
 /* ----- HERO SECTION ----- */
 
 .hero-section {
@@ -164,8 +230,7 @@ p {
   justify-content: center;
 }
 .neighborhood-map {
-  width: auto%;
-  height: 70vh;
+  width: 70%;
 }
 
 /* ----- RESOURCES -----*/
@@ -310,4 +375,10 @@ p {
   color: white;
   padding: 1.5rem;
   text-align: center;
+}
+
+@media (max-width: 768px) {
+  .hero-text {
+    font-size: 2.5rem;
+  }
 }
