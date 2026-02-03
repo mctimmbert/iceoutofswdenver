@@ -377,8 +377,32 @@ p {
   text-align: center;
 }
 
+/* ----- TABLET BREAKPOINT ----- */
 @media (max-width: 768px) {
   .hero-text {
     font-size: 2.5rem;
+  }
+
+  .header-title {
+    font-size: 1.5rem;
+  }
+}
+
+/* ----- MOBILE BREAKPOINT ----- */
+@media (max-width: 440px) {
+  .hero-text {
+    font-size: 2rem;
+  }
+
+  .header-title {
+    font-size: 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
   }
 }

@@ -18,18 +18,30 @@
 </head>
 <body>
   <header class="site-header">
-    <div class="nav-container">
-      <a href="index.html" class="header-title">ICE Out of Southwest Denver</a>
+      <div class="nav-container">
+        <a href="index.html" class="header-title">ICE Out of Southwest Denver</a>
 
-      <nav class="site-nav" aria-label="Main">
-        <ul class="nav-links">
-          <li><a href="resources.html" aria-current="page">Resources</a></li>
-          <li><a href="events.html">Events</a></li>
-          <li><a href="connect.html">Get Connected</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+        
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="primary-nav"
+          aria-label="Open menu">
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </button>
+
+        <nav class="site-nav" id="primary-nav">
+          <ul class="nav-links">
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="connect.html">Get Connected</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
   <main class="site-main">
       <div class="container">
@@ -123,4 +135,24 @@
     <p>&copy; 2026 ICE Out of Southwest Denver</p>
   </footer>
 </body>
+
+<script>
+      const toggle = document.querySelector(".nav-toggle");
+      const nav = document.querySelector("#primary-nav");
+
+      toggle.addEventListener("click", () => {
+        const isOpen = nav.classList.toggle("is-open");
+        toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        toggle.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+      });
+
+      // optional: close menu after clicking a link (nice on mobile)
+      nav.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          nav.classList.remove("is-open");
+          toggle.setAttribute("aria-expanded", "false");
+          toggle.setAttribute("aria-label", "Open menu");
+        });
+      });
+    </script>
 </html>
